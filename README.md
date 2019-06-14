@@ -1,13 +1,27 @@
-# Docker for [FineBI](https://finebi.com) 5.1
+# Docker for [FineBI](https://www.finebi.com) 5.1
 
-![License MIT](https://img.shields.io/badge/license-MIT-blue.svg) [![Build Status](https://travis-ci.org/jwilder/nginx-proxy.svg?branch=master)](https://travis-ci.org/haodong/docker-finebi) [![](https://img.shields.io/docker/stars/haodong/docker-finebi.svg)](https://hub.docker.com/r/haodong/docker-finebi 'DockerHub') [![](https://img.shields.io/docker/pulls/haodong/docker-finebi.svg)](https://hub.docker.com/r/haodong/docker-finebi 'DockerHub')
+![License MIT](https://img.shields.io/badge/license-MIT-blue.svg)
+![Version](https://images.microbadger.com/badges/version/haodong/finebi.svg)
+[![Build Status](https://travis-ci.org/haodong/docker-finebi.svg?branch=master)](https://travis-ci.org/haodong/docker-finebi)
+[![Layers](https://images.microbadger.com/badges/image/haodong/finebi.svg)](https://microbadger.com/images/haodong/finebi "Get your own image badge on microbadger.com")
+[![Stars](https://img.shields.io/docker/stars/haodong/finebi.svg)](https://hub.docker.com/r/haodong/finebi 'DockerHub')
+![Pulls](https://shields.beevelop.com/docker/pulls/haodong/finebi.svg?style=flat-square)
 
-## Usage
+## Simple Running
+
+```shell
+docker pull haodong/finebi
+docker run --expose=37799 haodong/finebi:latest
+```
+
+Open [this page](http://localhost:37799/webroot/decision) to start.
+
+## Extended Running
 
 ```shell
 docker network create nginx-proxy
 docker-compose up -d
 ```
 
-1. Add "your_ip bi.com" to your hosts file.
+1. Add "yourIP bi.com" to your hosts file.
 2. Then visit [this page](http://bi.com/webroot/decision/login/initialization) to start.
