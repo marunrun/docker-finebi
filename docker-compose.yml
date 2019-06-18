@@ -1,4 +1,4 @@
-version: '3.4'
+version: '2'
 
 services:
 
@@ -9,25 +9,26 @@ services:
         networks:
             - nginx-proxy
         environment:
-          - VIRTUAL_HOST=bi.com
-          - VIRTUAL_NETWORK=nginx-proxy
-          - VIRTUAL_PORT=37799
-          #- LETSENCRYPT_HOST=bi.com
-          #- LETSENCRYPT_EMAIL=mail@bi.com
+            - VIRTUAL_HOST=bi.com
+            - VIRTUAL_NETWORK=nginx-proxy
+            - VIRTUAL_PORT=37799
+            #- LETSENCRYPT_HOST=bi.com
+            #- LETSENCRYPT_EMAIL=mail@bi.com
 
-  nginx-proxy:
-    image: jwilder/nginx-proxy
-    container_name: nginx-proxy
-    ports:
-      - "80:80"
-      - "443:443"
-    volumes:
-        - /var/run/docker.sock:/tmp/docker.sock:ro
-        #- ./certs:/etc/nginx/certs:ro
-    networks:
-        - nginx-proxy
+    nginx-proxy:
+        image: jwilder/nginx-proxy
+        container_name: nginx-proxy
+        ports:
+            - "80:80"
+            #- "443:443"
+        volumes:
+            - /var/run/docker.sock:/tmp/docker.sock:ro
+            #- ./certs:/etc/nginx/certs:ro
+        networks:
+            - nginx-proxy
 
 networks:
     nginx-proxy:
         external:
             name: nginx-proxy
+
