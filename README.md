@@ -1,4 +1,4 @@
-# Docker for [FineBI](https://www.finebi.com) 5.1
+# Docker for [FineBI](https://www.finebi.com)
 
 ![License MIT](https://img.shields.io/badge/license-MIT-blue.svg)
 ![Version](https://images.microbadger.com/badges/version/haodong/finebi.svg)
