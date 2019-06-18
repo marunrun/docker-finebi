@@ -1,4 +1,4 @@
-version: '3.4'
+version: '2'
 
 services:
 
@@ -15,17 +15,17 @@ services:
           #- LETSENCRYPT_HOST=bi.com
           #- LETSENCRYPT_EMAIL=mail@bi.com
 
-  nginx-proxy:
-    image: jwilder/nginx-proxy
-    container_name: nginx-proxy
-    ports:
-      - "80:80"
-      - "443:443"
-    volumes:
-        - /var/run/docker.sock:/tmp/docker.sock:ro
-        #- ./certs:/etc/nginx/certs:ro
-    networks:
-        - nginx-proxy
+    nginx-proxy:
+        image: jwilder/nginx-proxy
+        container_name: nginx-proxy
+        ports:
+            - "80:80"
+            - "443:443"
+        volumes:
+            - /var/run/docker.sock:/tmp/docker.sock:ro
+            #- ./certs:/etc/nginx/certs:ro
+        networks:
+            - nginx-proxy
 
 networks:
     nginx-proxy:

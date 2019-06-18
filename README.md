@@ -7,6 +7,11 @@
 [![Stars](https://img.shields.io/docker/stars/haodong/finebi.svg)](https://hub.docker.com/r/haodong/finebi 'DockerHub')
 ![Pulls](https://shields.beevelop.com/docker/pulls/haodong/finebi.svg?style=flat-square)
 
+## Intro
+This is a personal work for FinBI, a great BI server platform.
+For more, visit [their homepage](https://www.finebi.com/)
+Please don't hesitate to star me if feeling good.
+
 ## Simple Running
 
 ```shell

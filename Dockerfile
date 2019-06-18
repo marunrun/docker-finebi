@@ -2,6 +2,7 @@ FROM ubuntu:18.04
 MAINTAINER haodong <halbertdong@gmail.com>
 
 ENV LANG C.UTF-8
+ENV TZ Asia/Shanghai
 WORKDIR /
 ADD install_FineBI5_1-CN-expect.sh ./
 
