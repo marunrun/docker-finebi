@@ -18,6 +18,8 @@ expect "是否创建快捷连接"
 send "n\r"
 expect "添加桌面快捷方式"
 send "n\r"
+expect "生成安全密钥"
+send "n\r"
 expect "运行 FineBI?"
 send "y\r"
 interact
